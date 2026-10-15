@@ -18,7 +18,7 @@ public class BankAccount {
         history.add("Deposited: " + amount);
     }
 
-    // EXPLAIN: We return an unmodifiable list so callers can read the history
+    // We return an unmodifiable list so callers can read the history
     // but cannot do `account.getHistory().clear()`, which would bypass encapsulation.
     public List<String> getHistory() {
         return Collections.unmodifiableList(history);
